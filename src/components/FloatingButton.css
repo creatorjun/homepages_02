@@ -1,0 +1,50 @@
+/* src/components/FloatingButton.css */
+
+.floating-buttons-container {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column-reverse; /* 아이템을 역순으로 위로 쌓음 */
+  gap: 15px; /* 버튼 사이의 간격 */
+  align-items: center;
+}
+
+.floating-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.floating-button:hover {
+  transform: scale(1.1);
+}
+
+/* 전화걸기 버튼 */
+.floating-button.call-button {
+  background-color: #FACC15;
+}
+
+.floating-button.call-button:hover {
+  background-color: #fafa1a;
+}
+
+/* 상담신청 버튼 */
+.floating-button.contact-button {
+  background-color: #FACC15;
+}
+
+.floating-button.contact-button:hover {
+  background-color: #fafa1a;
+}
+
+.floating-button img {
+  width: 30px;
+  height: 30px;
+}

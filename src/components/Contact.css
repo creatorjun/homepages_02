@@ -1,0 +1,134 @@
+/* Contact.css */
+
+.contact {
+  background: var(--color-light);
+  color: var(--color-dark);
+}
+.contact-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 20px;
+}
+.contact-header h2 {
+  font-size: 2.5rem;
+  color: var(--color-dark);
+}
+.contact-header p {
+  color: #555;
+  margin-bottom: 40px;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.form-group-container {
+  display: flex;
+  gap: 20px;
+}
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.form-group label {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+.form-group input {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.privacy-policy {
+  text-align: left;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+}
+.privacy-checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.privacy-details-toggle {
+  margin-left: 10px;
+  color: var(--color-accent);
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+.privacy-details-toggle:hover {
+  filter: brightness(0.9);
+}
+.privacy-content {
+  background-color: white;
+  color: #333;
+  padding: 15px;
+  margin-top: 10px;
+  font-size: 0.8rem;
+  border-radius: 5px;
+}
+.submit-button {
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.submit-button:hover {
+  background-color: #333;
+}
+.submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  color: #666;
+}
+.submit-message {
+  margin-top: 15px;
+  font-weight: bold;
+}
+.react-datepicker-wrapper {
+  width: 100%;
+}
+.date-picker-input {
+  width: 100%;
+  padding: 15px 40px 15px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+.date-picker-container {
+  position: relative;
+  width: 100%;
+}
+.date-picker-container::after {
+  content: '';
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23888888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3crect x='3' y='4' width='18' height='18' rx='2' ry='2'%3e%3c/rect%3e%3cline x1='16' y1='2' x2='16' y2='6'%3e%3c/line%3e%3cline x1='8' y1='2' x2='8' y2='6'%3e%3c/line%3e%3cline x1='3' y1='10' x2='21' y2='10'%3e%3c/line%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .form-group-container {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,68 @@
+/* src/components/Header.css */
+
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    z-index: 1000;
+    transition: background-color 0.4s ease, padding 0.4s ease, color 0.4s ease;
+    color: #2c3e50;
+}
+
+.main-header.scrolled {
+    background-color: rgba(26, 26, 26, 0.9);
+    color: var(--color-light);
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    /* Text-specific styles are no longer needed */
+}
+
+.logo-image {
+    height: 35px;
+    width: auto;
+    display: block;
+}
+
+/* 기본 상태: 어두운 로고 보임, 밝은 로고 숨김 */
+.logo .light-logo {
+    display: none;
+}
+.logo .dark-logo {
+    display: block;
+}
+
+/* 스크롤된 상태: 어두운 로고 숨김, 밝은 로고 보임 */
+.main-header.scrolled .logo .light-logo {
+    display: block;
+}
+.main-header.scrolled .logo .dark-logo {
+    display: none;
+}
+
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.main-nav a:hover {
+    color: var(--color-accent);
+}
+
+@media(max-width: 768px) {
+    .main-header {
+        padding: 1.5rem;
+    }
+    .main-nav {
+        display: none;
+    }
+}

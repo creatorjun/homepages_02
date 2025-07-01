@@ -1,0 +1,52 @@
+/* src/components/Flats.css */
+
+.flats {
+    background-color: #ffffff;
+}
+
+.flats .section-title {
+    text-align: center;
+}
+
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-top: 4rem;
+}
+
+.plan-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 마우스를 올렸을 때 적용되는 강조 효과 */
+.plan-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+.plan-image {
+    width: 100%;
+    display: block;
+}
+
+.plan-info {
+    padding: 1.5rem;
+}
+
+.plan-title {
+    font-family: var(--font-heading);
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    color: var(--color-dark);
+}
+
+.plan-details {
+    color: #555;
+    line-height: 1.6;
+}
