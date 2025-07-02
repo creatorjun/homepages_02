@@ -39,9 +39,9 @@
 .hero-main-text {
     font-family: 'Nanum Pen Script', sans-serif;
     font-weight: 400;
-    font-size: 5.5rem;
     line-height: 1.4;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    font-size: clamp(3.5rem, 1rem + 5vw, 5.5rem);
 }
 
 .dark-navy {
@@ -55,8 +55,5 @@
 @media(max-width: 768px) {
     .hero-logo-image {
         height: 35px;
-    }
-    .hero-main-text {
-        font-size: 3.5rem;
     }
 }

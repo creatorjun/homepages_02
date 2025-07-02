@@ -50,3 +50,9 @@
     margin-top: 2rem;
     margin-bottom: 0;
 }
+
+@media(max-width: 768px) {
+    .footer-logo-image {
+        height: 22px;
+    }
+}

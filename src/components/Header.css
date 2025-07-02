@@ -21,10 +21,6 @@
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-.logo {
-    /* Text-specific styles are no longer needed */
-}
-
 .logo-image {
     height: 35px;
     width: auto;
@@ -64,5 +60,8 @@
     }
     .main-nav {
         display: none;
+    }
+    .logo-image {
+        height: 22px;
     }
 }

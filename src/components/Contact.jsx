@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import './Contact.css';
+import { content } from '../data/contents.js';
 
 function Contact() {
+  const { contact } = content;
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [visitDate, setVisitDate] = useState(null);
@@ -36,7 +38,6 @@ function Contact() {
     setSubmitMessage('');
 
     const formData = new FormData();
-    // 서버(send_sms.php)에서 사용하는 필드명('Name', 'Mobile' 등)과 일치시킵니다.
     formData.append('Name', name);
     formData.append('Mobile', phone);
     if (visitDate) {
@@ -44,8 +45,7 @@ function Contact() {
     }
     formData.append('AgreeYN', agree ? 'Y' : 'N');
     
-    // 이전에 알려주신 Request URL을 사용합니다.
-    const phpApiUrl = 'https://qtlab.shop/sample02/send_sms.php';
+    const phpApiUrl = 'send_sms.php';
 
     try {
       const response = await fetch(phpApiUrl, {
@@ -75,8 +75,15 @@ function Contact() {
     <section id="contact" className="contact">
       <div className="contact-content" data-aos="fade-up">
         <div className="contact-header">
-          <h2>상담신청</h2>
-          <p>상도 힐스 더원에 대해 궁금한 점이 있으신가요?<br />전문 상담사가 신속하게 안내해 드립니다.</p>
+          <h2>{contact.sectionTitle}</h2>
+          <p>
+            {contact.description.map((line, index) => (
+              <React.Fragment key={index}>
+                {line}
+                {index < contact.description.length - 1 && <br />}
+              </React.Fragment>
+            ))}
+          </p>
         </div>
         <form className="contact-form" onSubmit={handleSubmit}>
           <div className="form-group-container">
@@ -115,10 +122,10 @@ function Contact() {
             
             {detailsVisible && (
               <div className="privacy-content">
-                <strong>개인정보 수집 및 이용 안내</strong>
-                <p>1. 수집하는 개인정보 항목: 이름, 연락처</p>
-                <p>2. 수집 및 이용 목적: 분양 상담 및 안내, 마케팅 활용</p>
-                <p>3. 보유 및 이용 기간: 수집일로부터 1년 (고객 동의 철회 시 즉시 파기)</p>
+                <strong>{contact.privacyPolicy.title}</strong>
+                {contact.privacyPolicy.clauses.map((clause, index) => (
+                  <p key={index}>{clause}</p>
+                ))}
               </div>
             )}
           </div>

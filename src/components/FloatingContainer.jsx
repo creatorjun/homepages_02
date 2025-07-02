@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { FaCommentDots, FaBell } from 'react-icons/fa';
 import './FloatingContainer.css';
+import { content } from '../data/contents.js';
 
 function FloatingContainer({ onShowPopup }) {
+  const { floating } = content;
   const [isSmsExpanded, setIsSmsExpanded] = useState(false);
   const [smsMessage, setSmsMessage] = useState('');
   const [smsPhone, setSmsPhone] = useState('');
@@ -65,20 +67,20 @@ function FloatingContainer({ onShowPopup }) {
   return (
     <>
       <div className="floating-button-container">
-        <a href="tel:1666-8682" className="floating-call-button call">
-          <span>분양문의</span>
+        <a href={`tel:${floating.callNumber.replace(/-/g, '')}`} className="floating-call-button call">
+          <span>{floating.callText}</span>
           <span className="call-number">
             <img src="images/phone.png" alt="전화 아이콘" className="call-icon" />
-            1666-8682
+            {floating.callNumber}
           </span>
         </a>
         <div className="bottom-button-row">
           <a href="#contact" className="floating-call-button reservation">
-            <span>상담 신청</span>
+            <span>{floating.consultText}</span>
           </a>
           <button className="floating-call-button popup-show" onClick={onShowPopup}>
             <FaBell />
-            <span>팝업보기</span>
+            <span>{floating.popupText}</span>
           </button>
         </div>
       </div>
@@ -87,7 +89,7 @@ function FloatingContainer({ onShowPopup }) {
         {isSmsExpanded ? (
           <div className="sms-form-wrapper">
             <div className="sms-form-header">
-              <h3>문자 상담</h3>
+              <h3>{floating.smsWidgetTitle}</h3>
               <button onClick={handleSmsToggle} className="sms-close-button">&times;</button>
             </div>
             <form onSubmit={handleSmsSubmit} className="sms-form-content">
