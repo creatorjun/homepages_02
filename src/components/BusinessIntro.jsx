@@ -1,6 +1,7 @@
 import React from 'react';
 import './BusinessIntro.css';
 import { content } from '../data/contents.js';
+import SectionTitle from './SectionTitle.jsx';
 
 function BusinessIntro() {
   const { businessIntro } = content;
@@ -8,7 +9,7 @@ function BusinessIntro() {
   return (
     <section id="business-intro" className="business-intro">
       <div className="container">
-        <h2 className="section-title" data-aos="fade-up">{businessIntro.sectionTitle}</h2>
+        <SectionTitle title={businessIntro.sectionTitle} aosType="fade-up" />
         
         <div className="intro-image-container" data-aos="fade-up" data-aos-delay="200">
           <img src={businessIntro.mainImage} alt="상도 힐스 더원 메인 조감도" className="intro-main-image" />

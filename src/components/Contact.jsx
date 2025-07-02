@@ -3,6 +3,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import './Contact.css';
 import { content } from '../data/contents.js';
+import SectionTitle from './SectionTitle.jsx';
 
 function Contact() {
   const { contact } = content;
@@ -74,17 +75,10 @@ function Contact() {
   return (
     <section id="contact" className="contact">
       <div className="contact-content" data-aos="fade-up">
-        <div className="contact-header">
-          <h2>{contact.sectionTitle}</h2>
-          <p>
-            {contact.description.map((line, index) => (
-              <React.Fragment key={index}>
-                {line}
-                {index < contact.description.length - 1 && <br />}
-              </React.Fragment>
-            ))}
-          </p>
-        </div>
+        <SectionTitle 
+          title={contact.sectionTitle} 
+          description={contact.description}
+        />
         <form className="contact-form" onSubmit={handleSubmit}>
           <div className="form-group-container">
             <div className="form-group">

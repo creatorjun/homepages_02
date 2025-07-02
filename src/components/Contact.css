@@ -10,14 +10,6 @@
   text-align: center;
   padding: 0 20px;
 }
-.contact-header h2 {
-  font-size: clamp(2.2rem, 1.5rem + 2.5vw, 3rem);
-  color: var(--color-dark);
-}
-.contact-header p {
-  color: #555;
-  margin-bottom: 40px;
-}
 .contact-form {
   display: flex;
   flex-direction: column;

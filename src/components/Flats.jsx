@@ -1,6 +1,7 @@
 import React from 'react';
 import './Flats.css';
 import { content } from '../data/contents.js';
+import SectionTitle from './SectionTitle.jsx';
 
 function Flats() {
   const { flats } = content;
@@ -8,7 +9,7 @@ function Flats() {
   return (
     <section id="types" className="flats">
       <div className="container">
-        <h2 className="section-title" data-aos="fade-up">{flats.sectionTitle}</h2>
+        <SectionTitle title={flats.sectionTitle} aosType="fade-up" />
         <div className="plans-grid">
           
           {flats.plans.map((plan) => (

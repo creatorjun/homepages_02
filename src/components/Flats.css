@@ -4,10 +4,6 @@
     background-color: #ffffff;
 }
 
-.flats .section-title {
-    text-align: center;
-}
-
 .plans-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));

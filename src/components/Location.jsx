@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import './Location.css';
 import { content } from '../data/contents.js';
+import SectionTitle from './SectionTitle.jsx';
 
 function Location() {
   const { location } = content;
@@ -49,10 +50,10 @@ function Location() {
   return (
     <section id="location" className="location">
       <div className="container" data-aos="fade-up">
-        <div className="section-title" style={{ textAlign: 'center', marginBottom: '60px' }}>
-            <h2>{location.sectionTitle}</h2>
-            <p style={{ maxWidth: '600px', margin: '0 auto' }}>{location.sectionDescription}</p>
-        </div>
+        <SectionTitle 
+          title={location.sectionTitle} 
+          description={location.sectionDescription}
+        />
 
         <div className="location-content" data-aos-delay="200">
             <div className="location-map">
