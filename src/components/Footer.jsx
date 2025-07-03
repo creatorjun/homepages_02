@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import { content } from '../data/contents.js';
+import { content } from '../data/contents.jsx';
 
 function Footer() {
   const { footer } = content;
@@ -12,7 +12,7 @@ function Footer() {
       </div>
       <div className="footer-info-container">
         <p>
-          <strong>{footer.info.split(' | ')[0]}</strong> | {footer.info.split(' | ')[1]}<br />
+          <strong>{footer.info.split(' | ')[0]}</strong><br />
           {footer.address}
         </p>
         <p className="footer-disclaimer">

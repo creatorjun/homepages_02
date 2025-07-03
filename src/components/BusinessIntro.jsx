@@ -1,6 +1,6 @@
 import React from 'react';
 import './BusinessIntro.css';
-import { content } from '../data/contents.js';
+import { content } from '../data/contents.jsx';
 import SectionTitle from './SectionTitle.jsx';
 
 function BusinessIntro() {

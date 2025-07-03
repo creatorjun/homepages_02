@@ -1,11 +1,10 @@
-// src/data/content.js
+// src/data/content.jsx
 
 // 사이트 전반에 사용될 정보
 const siteInfo = {
   title: "상도 힐스더원",
-  company: "(주)구담",
-  contactNumber: "1666-8280",
-  address: "서울특별시 동작구 상도동 211-386번지 일원"
+  contactNumber: "1666-8682",
+  address: "서울특별시 동작구 상도동 154-8"
 };
 
 // 각 섹션별 콘텐츠

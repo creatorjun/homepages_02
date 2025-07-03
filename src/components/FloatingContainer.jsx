@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaCommentDots, FaBell } from 'react-icons/fa';
 import './FloatingContainer.css';
-import { content } from '../data/contents.js';
+import { content } from '../data/contents.jsx';
 
 function FloatingContainer({ onShowPopup }) {
   const { floating } = content;

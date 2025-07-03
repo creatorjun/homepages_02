@@ -1,6 +1,6 @@
 import React from 'react';
 import './Hero.css';
-import { content } from '../data/contents.js';
+import { content } from '../data/contents.jsx';
 
 function Hero() {
   const { hero } = content;

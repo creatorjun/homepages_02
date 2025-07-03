@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import './Location.css';
-import { content } from '../data/contents.js';
+import { content } from '../data/contents.jsx';
 import SectionTitle from './SectionTitle.jsx';
 
 function Location() {

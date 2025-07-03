@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import './Contact.css';
-import { content } from '../data/contents.js';
+import { content } from '../data/contents.jsx';
 import SectionTitle from './SectionTitle.jsx';
 
 function Contact() {
