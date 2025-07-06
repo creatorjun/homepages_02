@@ -101,7 +101,7 @@ export const content = {
   footer: {
     logoImage: "./images/logo_02.webp",
     info: `${siteInfo.title} | 사업주체: ${siteInfo.company}`,
-    address: `대표전화: ${siteInfo.contactNumber} | 사업지 주소: ${siteInfo.address}`,
+    address: `홍보 대행 : 태양기획  |  290-02-03088 | 대표전화: ${siteInfo.contactNumber}`,
     disclaimer: "※ 본 사이트의 CG, 이미지 및 내용은 소비자의 이해를 돕기 위해 제작된 것으로, 실제와 다소 차이가 있을 수 있습니다.",
     copyright: `© ${new Date().getFullYear()} ${siteInfo.title}. All Rights Reserved.`
   },
