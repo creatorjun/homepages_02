@@ -4,17 +4,22 @@
 const siteInfo = {
   title: "상도 힐스더원",
   contactNumber: "1666-8682",
-  address: "서울특별시 동작구 상도동 154-8"
+  address: "서울특별시 동작구 상도동 154-8",
+  company: "태양기획"
 };
 
 // 각 섹션별 콘텐츠
 export const content = {
+  // siteInfo를 content 객체 내에서도 사용할 수 있도록 추가
+  siteInfo: siteInfo, 
+
   // 1. 헤더
   header: {
     logoImage: {
-      dark: "./images/logo_02.webp", // 스크롤 내리기 전 로고
-      light: "./images/logo_01.webp"  // 스크롤 내린 후 로고
+      dark: "./images/logo_01.webp", // 스크롤 내리기 전 로고
+      light: "./images/logo_02.webp"  // 스크롤 내린 후 로고
     },
+    // 내비게이션 링크 텍스트 수정
     navLinks: [
       { title: "사업개요", href: "#business-intro" },
       { title: "입지안내", href: "#location" },
@@ -100,8 +105,8 @@ export const content = {
   // 7. 푸터 섹션
   footer: {
     logoImage: "./images/logo_02.webp",
-    info: `${siteInfo.title} | 사업주체: ${siteInfo.company}`,
-    address: `홍보 대행 : 태양기획  |  290-02-03088 | 대표전화: ${siteInfo.contactNumber}`,
+    info: `신탁사 : 무궁화신탁 | 시행사 : (주) 예도산업개발 | 시공사 : 1군 메이저 건설사(예정)`,
+    address: `관리자 : ${siteInfo.company} |  ${siteInfo.contactNumber}`,
     disclaimer: "※ 본 사이트의 CG, 이미지 및 내용은 소비자의 이해를 돕기 위해 제작된 것으로, 실제와 다소 차이가 있을 수 있습니다.",
     copyright: `© ${new Date().getFullYear()} ${siteInfo.title}. All Rights Reserved.`
   },

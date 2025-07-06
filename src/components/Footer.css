@@ -55,4 +55,7 @@
     .footer-logo-image {
         height: 27px;
     }
+    .main-footer {
+        padding-bottom: 150px;
+    }
 }
