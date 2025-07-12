@@ -31,6 +31,11 @@
     word-break: keep-all;
 }
 
+/* 추가된 클래스 */
+.footer-info .footer-info-separator {
+    margin: 0 10px;
+}
+
 .footer-info-container strong {
     font-weight: 600;
     color: #fff;
@@ -57,5 +62,19 @@
     }
     .main-footer {
         padding-bottom: 150px;
+    }
+
+    /* --- 아래 내용 추가 --- */
+    .footer-info .footer-info-item {
+        display: block; /* 각 항목을 블록 요소로 만들어 줄바꿈 적용 */
+        margin-bottom: 5px; /* 항목 간의 간격 추가 */
+    }
+
+    .footer-info .footer-info-separator {
+        display: none; /* 구분자 숨기기 */
+    }
+
+    .footer-info:not(:last-of-type) {
+        margin-bottom: 1rem; /* 정보 단락 간의 간격 조정 */
     }
 }
