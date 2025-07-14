@@ -105,7 +105,7 @@ export const content = {
   // 7. 푸터 섹션
   footer: {
     logoImage: "./images/logo_02.webp",
-    info: `신탁사: 무궁화신탁 | 대행사: (주)구담 | 시행사: (주)예도산업개발 | 시공사: 1군 메이저 건설사(예정)`,
+    info: "신탁사 : 무궁화신탁 | 시공사 : 1군 메이저 건설사(예정) | 시행사 : (주) 예도산업개발 | 대행사 : (주) 구담",
     address: `관리자 : ${siteInfo.company} | 사업자번호 : 290-02-03088 |  ${siteInfo.contactNumber}`,
     disclaimer: "※ 본 사이트의 CG, 이미지 및 내용은 소비자의 이해를 돕기 위해 제작된 것으로, 실제와 다소 차이가 있을 수 있습니다.",
     copyright: `© ${new Date().getFullYear()} ${siteInfo.title}. All Rights Reserved.`
